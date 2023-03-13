@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Local Storage Demo</title>
+</head>
+<body>
+  <h1>Local Storage Demo</h1>
+  <button onclick="addStorage()">Add Storage</button>
+  <button onclick="fetchData()">remove storage</button>
+  <button onclick="clearStorage()">Clear Storage</button>
+  <script>
+    function addStorage() {
+      var data = prompt("Enter data to store:");
+      if (data != null) {
+        localStorage.setItem("data", data);
+        alert("Data saved to local storage!");
+      }
+    }
+
+    function fetchData() {
+      var data = localStorage.getItem("data");
+      if (data != null) {
+        alert("Data stored in local storage: " + data);
+      } else {
+        alert("No data found in local storage.");
+      }
+    }
+
+    function clearStorage() {
+      localStorage.clear();
+      alert("Local storage cleared!");
+    }
+  </script>
+</body>
+</html>
