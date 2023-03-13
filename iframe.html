@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IFrame</title>
+</head>
+<body>
+  <h1>IFrame DOM</h1>
+  <button onclick="createIframe()">Click Me</button>
+  
+  <script>
+    function createIframe() {
+      var iframe = document.createElement("iframe");
+      iframe.setAttribute("src", "https://primatesdev.com");
+      iframe.style.width = "2024px";
+      iframe.style.height = "1024px";
+      document.body.appendChild(iframe);
+    }
+  </script>
+</body>
+</html>
